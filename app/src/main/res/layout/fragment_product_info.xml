@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingTop="64dp"
+        android:paddingBottom="80dp">
+
+        <!-- ID del QR escaneado -->
+        <TextView
+            android:id="@+id/tv_qr_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#555555"
+            android:textSize="12sp"
+            android:layout_marginBottom="32dp"
+            android:importantForAccessibility="no" />
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- SECCIÓN 1: NOMBRE -->
+        <!-- ══════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_section_name"
+            android:textColor="#1A73E8"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="8dp"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/product_name_placeholder"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/product_cd_name"
+            android:importantForAccessibility="yes"
+            android:focusable="true"
+            android:accessibilityTraversalBefore="@id/tv_product_description" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#222222"
+            android:layout_marginVertical="24dp"
+            android:importantForAccessibility="no" />
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- SECCIÓN 2: DESCRIPCIÓN -->
+        <!-- ══════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_section_description"
+            android:textColor="#1A73E8"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="8dp"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/tv_product_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/product_description_placeholder"
+            android:textColor="#DDDDDD"
+            android:textSize="18sp"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/product_cd_description"
+            android:importantForAccessibility="yes"
+            android:focusable="true"
+            android:accessibilityTraversalAfter="@id/tv_product_name"
+            android:accessibilityTraversalBefore="@id/tv_product_details" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#222222"
+            android:layout_marginVertical="24dp"
+            android:importantForAccessibility="no" />
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- SECCIÓN 3: DETALLES -->
+        <!-- ══════════════════════════════════════ -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_section_details"
+            android:textColor="#1A73E8"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="8dp"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/tv_product_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/product_details_placeholder"
+            android:textColor="#DDDDDD"
+            android:textSize="18sp"
+            android:lineSpacingMultiplier="1.5"
+            android:contentDescription="@string/product_cd_details"
+            android:importantForAccessibility="yes"
+            android:focusable="true"
+            android:accessibilityTraversalAfter="@id/tv_product_description" />
+
+    </LinearLayout>
+
+</ScrollView>

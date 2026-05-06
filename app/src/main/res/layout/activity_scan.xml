@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <!-- ViewPager2: maneja el swipe entre fragmentos -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Indicador de página — visible pero no esencial para TalkBack -->
+    <LinearLayout
+        android:id="@+id/ll_page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Punto página izquierda: Info Producto -->
+        <View
+            android:id="@+id/dot_info"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/dot_inactive" />
+
+        <!-- Punto página derecha: Scanner -->
+        <View
+            android:id="@+id/dot_scan"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/dot_active" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

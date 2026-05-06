@@ -1,53 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:fillViewport="true"
+    android:background="#121212"
     tools:context=".Login">
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="400dp"
-        android:layout_gravity="center"
-        android:src="@drawable/user"
-/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:hint="Usuario"
-        android:inputType="text"
-
-        />
-
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="32dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="48dp">
 
-        />
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/user"
+            android:contentDescription="@string/login_cd_logo"
+            android:importantForAccessibility="yes" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:importantForAccessibility="yes" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_subtitle"
+            android:textColor="#AAAAAA"
+            android:textSize="18sp"
+            android:layout_marginBottom="40dp"
+            android:importantForAccessibility="yes" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/login_hint_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_user"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:inputType="text"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:paddingHorizontal="16dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:hint="@string/login_hint_password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:paddingHorizontal="16dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="@string/login_btn_enter"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1A73E8"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/login_cd_btn_enter"
+            android:importantForAccessibility="yes" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/login_link_register"
+            android:textColor="#1A73E8"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/login_cd_link_register"
+            android:importantForAccessibility="yes" />
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="iniciar"
-        android:layout_gravity="center"
-        android:textSize="25dp"
-        />
+        <ProgressBar
+            android:id="@+id/progress_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:contentDescription="@string/login_loading"
+            android:importantForAccessibility="yes" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_register"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="Registrarse"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:layout_gravity="center"
-        />
-
-</LinearLayout>
+</ScrollView>

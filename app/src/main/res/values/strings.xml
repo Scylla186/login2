@@ -1,3 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">login2</string>
+    <!-- App -->
+    <string name="app_name">OpticHelp</string>
+
+    <!-- Login -->
+    <string name="login_title">OpticHelp</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="login_hint_user">Email address</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_btn_enter">Sign in</string>
+    <string name="login_link_register">Don\'t have an account? Register here</string>
+    <string name="login_cd_logo">OpticHelp logo</string>
+    <string name="login_cd_user_field">Email field, enter your email address</string>
+    <string name="login_cd_password_field">Password field, enter your password</string>
+    <string name="login_cd_btn_enter">Sign in button</string>
+    <string name="login_cd_link_register">Link to register</string>
+    <string name="login_loading">Signing in, please wait</string>
+
+    <!-- Login Errors -->
+    <string name="error_empty_user">Email field cannot be empty</string>
+    <string name="error_empty_password">Password field cannot be empty</string>
+    <string name="error_invalid_credentials">Incorrect email or password</string>
+    <string name="error_generic">An error occurred, please try again</string>
+
+    <!-- Register -->
+    <string name="register_title">User Registration</string>
+    <string name="register_hint_name">Full name</string>
+    <string name="register_hint_user">Email address</string>
+    <string name="register_hint_password">Password</string>
+    <string name="register_hint_confirm_password">Confirm password</string>
+    <string name="register_btn">Register</string>
+    <string name="register_cd_name">Full name field</string>
+    <string name="register_cd_user">Email address field</string>
+    <string name="register_cd_password">Password field</string>
+    <string name="register_cd_confirm_password">Confirm password field</string>
+    <string name="register_cd_btn">Register button</string>
+    <string name="register_loading">Registering user, please wait</string>
+    <string name="register_success">Registration successful, please sign in</string>
+
+    <!-- Register Errors -->
+    <string name="error_empty_name">Name cannot be empty</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_short_password">Password must be at least 6 characters</string>
+
+    <!-- Scanner -->
+    <string name="scan_hint">Point the camera at an OpticHelp QR code</string>
+    <string name="scan_hint_cd">Camera active. Point at an OpticHelp QR code. Tap the screen to scan.</string>
+    <string name="scan_invalid_qr">QR code not recognized. Only OpticHelp codes are accepted.</string>
+    <string name="scan_no_product">You have not scanned any product yet</string>
+    <string name="scan_page_indicator_scanner">Scanner, page 2 of 2</string>
+    <string name="scan_page_indicator_info">Product information, page 1 of 2</string>
+    <string name="scan_swipe_left_hint">Swipe left to scan</string>
+    <string name="scan_swipe_right_hint">Swipe right to see last scanned product</string>
+    <string name="scan_camera_permission_denied">Camera permission is required to use the scanner</string>
+    <string name="scan_tap_to_scan">Tap to scan</string>
+
+    <!-- Product Info -->
+    <string name="product_section_name">Product name</string>
+    <string name="product_section_description">Description</string>
+    <string name="product_section_details">Details</string>
+    <string name="product_no_data">No information available</string>
+    <string name="product_cd_name">Product name section</string>
+    <string name="product_cd_description">Product description section</string>
+    <string name="product_cd_details">Product details section, includes nutritional information and allergens</string>
+    <string name="product_name_placeholder">Margarita Chicken Chips 30g</string>
+    <string name="product_description_placeholder">Information provided by the administrator</string>
+    <string name="product_details_placeholder">Nutritional information, allergens and whether suitable for vegans</string>
+    <string name="product_vegan_yes">✓ Suitable for vegans</string>
+    <string name="product_vegan_no">✗ Not suitable for vegans</string>
+    <string name="product_allergens_label">Allergens:</string>
+    <string name="product_nutrition_label">Nutritional information:</string>
 </resources>

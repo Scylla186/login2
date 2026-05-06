@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "557994624044",
+    "project_id": "optichelp-e6dbb",
+    "storage_bucket": "optichelp-e6dbb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557994624044:android:e2b68124a398e856d93d89",
+        "android_client_info": {
+          "package_name": "com.example.login2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5eufl8BIORJOjgF3UFgxBzL28PXfvvIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
