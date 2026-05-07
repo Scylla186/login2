@@ -211,9 +211,22 @@ public class ScanFragment extends Fragment {
         mainHandler.post(() -> consultarProductoEnFirestore(rawValue));
     }
 
+    // ─── Consultar conexion con firestore ───────────────────────────────────────────────────
+    private boolean hayConexion() {
+        android.net.ConnectivityManager cm = (android.net.ConnectivityManager)
+                requireContext().getSystemService(android.content.Context.CONNECTIVITY_SERVICE);
+        android.net.NetworkInfo info = cm.getActiveNetworkInfo();
+        return info != null && info.isConnected();
+    }
     // ─── Consulta Firestore ───────────────────────────────────────────────────
 
     private void consultarProductoEnFirestore(String codigoQr) {
+        if (!hayConexion()) {
+            qrDetectado = false;
+            escaneando  = true;
+            mostrarMensajeSinConexion();
+            return;
+        }
         db.collection("codigos_qr")
                 .whereEqualTo("codigo_qr", codigoQr)
                 .whereEqualTo("activo", true)
@@ -272,6 +285,20 @@ public class ScanFragment extends Fragment {
                     escaneando  = true;
                     mostrarQrInvalido();
                 });
+    }
+
+    // ─── Mensaje de no conexion ────────────────────────────────────────────────────
+    private void mostrarMensajeSinConexion() {
+        if (tvInvalidQr == null) return;
+        tvInvalidQr.setText(getString(R.string.scan_no_internet));
+        tvInvalidQr.setVisibility(View.VISIBLE);
+        tvInvalidQr.announceForAccessibility(getString(R.string.scan_no_internet));
+        mainHandler.postDelayed(() -> {
+            if (tvInvalidQr != null) {
+                tvInvalidQr.setVisibility(View.GONE);
+                tvInvalidQr.setText(getString(R.string.scan_invalid_qr));
+            }
+        }, 3000);
     }
 
     // ─── Registrar escaneo ────────────────────────────────────────────────────

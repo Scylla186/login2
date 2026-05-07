@@ -54,6 +54,7 @@
     <string name="scan_swipe_right_hint">Swipe right to see last scanned product</string>
     <string name="scan_camera_permission_denied">Camera permission is required to use the scanner</string>
     <string name="scan_tap_to_scan">Tap to scan</string>
+    <string name="scan_no_internet">No internet connection. Connect to scan products.</string>
 
     <!-- Product Info -->
     <string name="product_section_name">Product name</string>
@@ -70,5 +71,4 @@
     <string name="product_vegan_no">✗ Not suitable for vegans</string>
     <string name="product_allergens_label">Allergens:</string>
     <string name="product_nutrition_label">Nutritional information:</string>
-    <string name="scan_no_internet">Sin conexión a internet. Conéctate para escanear productos.</string>
 </resources>

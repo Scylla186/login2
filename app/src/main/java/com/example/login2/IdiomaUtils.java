@@ -4,19 +4,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Locale;
 
 public class IdiomaUtils {
 
     private static final String PREFS      = "optichelp_prefs";
     private static final String KEY_IDIOMA = "idioma";
-
-    private static final List<String> PAISES_ESPANOL = Arrays.asList(
-            "ES", "MX", "CO", "AR", "PE", "VE", "CL", "EC", "GT", "CU",
-            "BO", "DO", "HN", "PY", "SV", "NI", "CR", "PA", "UY", "GQ"
-    );
 
     public static void aplicarIdioma(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
@@ -26,8 +19,19 @@ public class IdiomaUtils {
         if (idiomaGuardado != null) {
             idioma = idiomaGuardado;
         } else {
-            String pais = Locale.getDefault().getCountry().toUpperCase();
-            idioma = PAISES_ESPANOL.contains(pais) ? "es" : "en";
+            // Obtener idioma completo incluyendo variantes regionales
+            String idiomaDispositivo = Locale.getDefault().getLanguage();
+            String paisDispositivo   = Locale.getDefault().getCountry().toUpperCase();
+
+            // Es español si el idioma empieza con "es" O si el país es hispanohablante
+            if (idiomaDispositivo.startsWith("es") || paisDispositivo.equals("CO")
+                    || paisDispositivo.equals("MX") || paisDispositivo.equals("ES")
+                    || paisDispositivo.equals("AR") || paisDispositivo.equals("PE")
+                    || paisDispositivo.equals("VE") || paisDispositivo.equals("CL")) {
+                idioma = "es";
+            } else {
+                idioma = "en";
+            }
         }
 
         Locale locale = new Locale(idioma);
