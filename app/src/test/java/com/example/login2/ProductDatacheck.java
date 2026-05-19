@@ -8,6 +8,15 @@ import static org.junit.Assert.assertFalse;
 
 public class ProductDatacheck {
 
+    // Verifica que el patrón Singleton (Osea garantizar que una clase solo tenga
+    // una unica instancia) funciona correctamente
+    // que ScanFragment y ProductInfoFragment comparten
+    // exactamente la misma instancia de datos. Si esto fallara
+    // el fragmento de información mostraría datos vacíos aunque
+    // el scanner haya detectado un producto válido.
+
+    //"Effective Unit Testing" || Lasse Koskela || Capítulo 4 || pruebas de patrones de diseño.
+
     @Test
     public void testSingletonProductData() {
         // Verificar que siempre es la misma instancia

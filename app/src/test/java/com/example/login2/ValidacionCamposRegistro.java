@@ -6,6 +6,13 @@ import static org.junit.Assert.assertFalse;
 
 public class ValidacionCamposRegistro {
 
+
+    //Verifica que la lógica de validación del registro rechaza correctamente cada caso de error en el orden correcto
+    //Como campos vacios, incorrectos o incompletos
+    //"Clean Code" || Robert C. Martin || Capítulo 9 ||  Pruebas de validación
+
+
+
     @Test
     public void testValidacionCamposRegistro() {
         // Nombre vacío
@@ -20,9 +27,10 @@ public class ValidacionCamposRegistro {
         // Contraseñas no coinciden
         assertFalse(camposValidos("Juan Pérez", "test@gmail.com", "123456", "654321"));
 
-        // Todo válido
+        // Todo valido
         assertTrue(camposValidos("Juan Pérez", "test@gmail.com", "123456", "123456"));
     }
+
 
     private boolean camposValidos(String nombre, String correo,
                                   String password, String confirmar) {

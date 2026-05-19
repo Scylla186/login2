@@ -8,6 +8,9 @@ import java.util.regex.Pattern;
 
 public class regexqrCheck {
 
+    //Explicación: Prueba Logica de validacion, testeo de casos validos, invalidos y casos limite
+    // "The Art of Unit Testing" || Roy Osherove || Capítulo 2 || Prueba logica de validacion
+
     @Test
     public void testValidacionFormatoQR() {
         Pattern QR_PATTERN = Pattern.compile(
