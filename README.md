@@ -1,11 +1,11 @@
 cat > /mnt/user-data/outputs/README.md << 'EOF'
-# Login2 — OpticHelp QR Scanner 📱
+# OpticHelp QR Scanner 
 
 Aplicación Android para escanear códigos QR de productos y consultar su información nutricional en tiempo real, con autenticación de usuarios mediante Firebase.
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - **Autenticación** — Registro e inicio de sesión con Firebase Auth
 - **Escáner QR** — Lectura de códigos con CameraX + ML Kit
@@ -16,7 +16,7 @@ Aplicación Android para escanear códigos QR de productos y consultar su inform
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 com.example.login2
@@ -42,7 +42,7 @@ Login → [autenticación Firebase] → ScanActivity
 
 ---
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 | Componente | Librería / Servicio |
 |---|---|
@@ -56,7 +56,7 @@ Login → [autenticación Firebase] → ScanActivity
 
 ---
 
-## ⚙️ Configuración
+## Configuración
 
 ### Prerrequisitos
 
@@ -101,7 +101,7 @@ Login → [autenticación Firebase] → ScanActivity
 
 ---
 
-## 🧪 Pruebas unitarias
+## Pruebas unitarias
 
 Las pruebas se ubican en `src/test/` y se ejecutan con:
 
@@ -122,7 +122,7 @@ Las pruebas se ubican en `src/test/` y se ejecutan con:
 
 ---
 
-## 📄 Formato de código QR
+## Formato de código QR
 
 Los códigos escaneados deben seguir el patrón:
 
@@ -136,7 +136,7 @@ Ejemplos válidos: `OH-Ab12-Cd34-Ef56-Gh78`, `OH-AAAA-BBBB-CCCC-DDDD`
 
 ---
 
-## 📝 Licencia
+## Licencia
 
 Este proyecto fue desarrollado con fines académicos.
 EOF
