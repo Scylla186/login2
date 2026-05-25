@@ -140,4 +140,8 @@ Ejemplos válidos: `OH-Ab12-Cd34-Ef56-Gh78`, `OH-AAAA-BBBB-CCCC-DDDD`
 
 Este proyecto fue desarrollado con fines académicos.
 EOF
-echo "OK"
+
+
+## Enlace de descarga del APK de ANDROID
+
+https://drive.google.com/file/d/15rTMkZfbrtGrJfJDl_3Tx5drENCySnkh/view?usp=sharing 
