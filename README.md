@@ -2,6 +2,7 @@ cat > /mnt/user-data/outputs/README.md << 'EOF'
 # OpticHelp QR Scanner 
 
 Aplicación Android para escanear códigos QR de productos y consultar su información nutricional en tiempo real, con autenticación de usuarios mediante Firebase.
+Con un enfoque en personas invidentes.
 
 ---
 
